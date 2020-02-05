@@ -37,7 +37,7 @@ class CodecrackerCest
 
     public function _before(\UnitTester $I)
     {
-        $this->dict_class = new Codecracker();
+        $this->crackerClass = new Codecracker();
     }
 
     protected $stringPairs = [
