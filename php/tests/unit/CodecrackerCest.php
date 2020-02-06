@@ -37,7 +37,7 @@ class CodecrackerCest
 
     public function _before(\UnitTester $I)
     {
-        $this->crackerClass = new Codecracker();
+        $this->crackerClass = new Codecracker($this->decryptAlphabet);
     }
 
     protected $stringPairs = [
@@ -50,7 +50,7 @@ class CodecrackerCest
         }
     }
 
-    protected function decryptWord($decryptedWord){
+    // protected function decryptWord($decryptedWord){
 
-    }
+    // }
 }
