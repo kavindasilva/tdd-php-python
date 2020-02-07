@@ -19,6 +19,9 @@ class StringcalCest
 
     /**
      * @example { "send": "1", "expect": "1" }
+     * @example { "send": "2", "expect": "2" }
+     * @example { "send": "2.5", "expect": "2.5" }
+     * @example { "send": "106", "expect": "106" }
      */
     public function checkSingleParamInput(\UnitTester $I, \Codeception\Example $Example)
     {

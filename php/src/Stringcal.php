@@ -7,6 +7,10 @@ class Stringcal{
         if( empty($param1) && empty($param1)){
             return "0";
         }
+
+        if( empty($param2) ){
+            return (string)$param1;
+        }
     }
 }
 
