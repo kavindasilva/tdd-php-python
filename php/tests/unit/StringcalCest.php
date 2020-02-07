@@ -3,6 +3,7 @@ namespace App\Unit;
 
 class StringcalCest
 {
+    // http://codingdojo.org/kata/StringCalculator/
     protected $cal = null;
     public function _before(\UnitTester $I)
     {
@@ -13,6 +14,6 @@ class StringcalCest
     public function checkEmptyString(\UnitTester $I)
     {
         $result = $this->cal->add();
-        $I->assertEquals("", $result, "checkEmptyString() failed");
+        $I->assertEquals("0", $result, "checkEmptyString() failed");
     }
 }
