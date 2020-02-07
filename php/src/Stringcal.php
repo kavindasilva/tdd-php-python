@@ -13,7 +13,7 @@ class Stringcal{
         }
 
         else{
-            return (int)$param1 + (int)$param2;
+            return (double)$param1 + (double)$param2;
         }
     }
 }
