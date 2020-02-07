@@ -8,7 +8,7 @@ class Stringcal{
             return "0";
         }
 
-        if( empty($param2) ){
+        elseif( empty($param2) ){
             return (string)$param1;
         }
     }
