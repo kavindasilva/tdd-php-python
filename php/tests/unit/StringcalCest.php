@@ -31,6 +31,9 @@ class StringcalCest
 
     /**
      * @example { "para1": "1", "para2": "4", "expect": "5" }
+     * @example { "para1": "1.5", "para2": "60.4", "expect": "61.9" }
+     * @example { "para1": "1.131", "para2": "4.099", "expect": "5.230" }
+     * @example { "para1": "100", "para2": "0.5", "expect": "100.5" }
      */
     public function checkTwoParamInput(\UnitTester $I, \Codeception\Example $Example)
     {
