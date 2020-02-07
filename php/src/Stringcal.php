@@ -10,6 +10,9 @@ class Stringcal{
         }
         else{
             foreach($params as $val){
+                if( empty($val) ){
+                    return (string)$sum;
+                }
                 $sum += (double)$val;
             }
             return (string)$sum;
