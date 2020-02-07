@@ -3,18 +3,18 @@
 namespace App;
 
 class Stringcal{
-    public function add($param1=null, $param2=null){
-        if( empty($param1) && empty($param1)){
+    public function add(...$params){
+        if( empty($params) ){
             return "0";
         }
 
-        elseif( empty($param2) ){
-            return (string)$param1;
-        }
+        // elseif( empty($param2) ){
+        //     return (string)$param1;
+        // }
 
-        else{
-            return (double)$param1 + (double)$param2;
-        }
+        // else{
+        //     return (double)$param1 + (double)$param2;
+        // }
     }
 }
 
