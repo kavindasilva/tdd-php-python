@@ -16,4 +16,14 @@ class StringcalCest
         $result = $this->cal->add();
         $I->assertEquals("0", $result, "checkEmptyString() failed");
     }
+
+    /**
+     * @example { "send": "1", "expect": "1" }
+     */
+    public function checkSingleParamInput(\UnitTester $I, \Codeception\Example $Example)
+    {
+        $result = $this->cal->add( $Example["send"] );
+        $I->assertEquals( $Example["expect"], $result, "checkEmptyString() failed");
+    }
+
 }
