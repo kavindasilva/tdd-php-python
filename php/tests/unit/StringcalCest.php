@@ -1,4 +1,5 @@
 <?php 
+namespace App\Unit;
 
 class StringcalCest
 {
