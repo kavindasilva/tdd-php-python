@@ -11,6 +11,10 @@ class Stringcal{
         elseif( empty($param2) ){
             return (string)$param1;
         }
+
+        else{
+            return (int)$param1 + (int)$param2;
+        }
     }
 }
 
