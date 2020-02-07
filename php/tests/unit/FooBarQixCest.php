@@ -30,7 +30,7 @@ class FooBarQixCest
     }
 
 
-    public function checkForDivideByThree(\UnitTester $I){
+    public function checkResults(\UnitTester $I){
         $result = $this->class->getNumberFormatted();
         $I->assertEquals();
     }
