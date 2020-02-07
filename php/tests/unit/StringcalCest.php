@@ -29,4 +29,13 @@ class StringcalCest
         $I->assertEquals( $Example["expect"], $result, "checkEmptyString() failed");
     }
 
+    /**
+     * @example { "para1": "1", "para2": "4", "expect": "5" }
+     */
+    public function checkTwoParamInput(\UnitTester $I, \Codeception\Example $Example)
+    {
+        $result = $this->cal->add( $Example["para1"], $Example["para2"] );
+        $I->assertEquals( $Example["expect"], $result, "checkEmptyString() failed");
+    }
+
 }
