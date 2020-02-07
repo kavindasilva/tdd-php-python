@@ -4,8 +4,15 @@ namespace App;
 
 class Stringcal{
     public function add(...$params){
+        $sum = 0;
         if( empty($params) ){
-            return "0";
+            return (string)$sum;
+        }
+        else{
+            foreach($params as $val){
+                $sum += (double)$val;
+            }
+            return (string)$sum;
         }
 
         // elseif( empty($param2) ){
