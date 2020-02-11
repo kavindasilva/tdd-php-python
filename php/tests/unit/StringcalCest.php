@@ -48,12 +48,12 @@ class StringcalCest
     }
 
     /**
-     * @example { "para1": "4", "para2": "5", "para3": "5", "expect": "14" }
+     * @example { "paraMulti": " \"4\",  \"5\", \"5\" ", "expect": "14" }
      * @example { "para1": "12.1", "para2": "5.77", "para3": "5.5", "expect": "23.37" }
      */
     public function checkAnyNumberOfParamInput(\UnitTester $I, \Codeception\Example $Example)
     {
-        $result = $this->cal->add( $Example["para1"], $Example["para2"] );
+        $result = $this->cal->add( $Example["paraMulti"] );
         $I->assertEquals( $Example["expect"], $result, "checkEmptyString() failed");
     }
 

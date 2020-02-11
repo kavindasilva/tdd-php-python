@@ -9,6 +9,7 @@ class Stringcal{
             return (string)$sum;
         }
         else{
+            var_dump($params);
             foreach($params as $val){
                 if( empty($val) ){
                     return (string)$sum;
