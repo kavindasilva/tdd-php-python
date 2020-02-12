@@ -3,6 +3,7 @@
 namespace App;
 
 /**
+ * Question: http://codingdojo.org/kata/NumbersInWords/
  * Design:
  * 
  * convert number to string
@@ -22,7 +23,12 @@ class NumToWord{
         elseif($num<10 && $num>=0){
             return $this->convertOneToTen($num);
         }
-        elseif($num<20 && $num>=10){}
+        elseif($num<20 && $num>=10){
+            return $this->convertElevenToTwenty($num);
+        }
+        elseif($num<100 && $num>=20){
+            return $this->convertElevenToTwenty($num);
+        }
         // elseif($num<100 && $num>20){}
 
         $numbers = str_split($number);
