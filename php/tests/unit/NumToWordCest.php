@@ -10,6 +10,9 @@ class NumToWordCest
 
     /**
      * @example { "send": "745.00", "expect": "seven hundred and forty five" }
+     * @example { "send": "1.00", "expect": "one" }
+     * @example { "send": "20.00", "expect": "twenty" }
+     * @example { "send": "140.00", "expect": "hundred and forty" }
      * example { "send": "745.00", "expect": "2.5" }
      */
     public function tryToTest(\UnitTester $I, \Codeception\Example $Example)
