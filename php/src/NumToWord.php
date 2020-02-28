@@ -55,6 +55,12 @@ class NumToWord{
         }
         return "";
     }
+
+    protected function convertHundreds($num){}
+
+    protected function convertThousands($num){}
+
+
 }
 
 ?>
