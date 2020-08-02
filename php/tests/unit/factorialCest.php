@@ -10,14 +10,18 @@ class FactorialCest
     }
 
     /**
-     * @example { "number": "0", "expect": "seven hundred and forty five" }
-     * @example { "number": "1", "expect": "one" }
-     * @example { "number": "2.00", "expect": "six" }
-     * @example { "number": "3", "expect": "ten" }
-     * @example { "number": "5", "expect": "eleven" }
-     * @example { "number": "51", "expect": "seventeen" }
-     * @example { "number": "365", "expect": "twenty" }
-     * @example { "number": "3.52", "expect": "hundred and forty" }
+     * @example { "number": 0, "expect": 1 }
+     * @example { "number": 1, "expect": 1 }
+     * @example { "number": 2.00, "expect": 2 }
+     * @example { "number": 3, "expect": 6 }
+     * @example { "number": 5, "expect": 120 }
+     * @example { "number": 12, "expect": 479001600 }
+     * @example { "number": 3.52, "expect": false }
+     * @example { "number": "3", "expect": 6 }
+     * @example { "number": "1.0", "expect": 1 }
+     * @example { "number": "1.01", "expect": false }
+     * @example { "number": "3.52", "expect": false }
+     * @example { "number": 0.5, "expect": false }
      */
     public function checkFactorials(\UnitTester $I, \Codeception\Example $Example)
     {
