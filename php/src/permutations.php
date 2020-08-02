@@ -7,6 +7,9 @@ class Permutations{
         if( empty($elems) ){
             return false;
         }
+        if( count($elems) === 1 ){
+            return [ $elems[0] ];
+        }
     }
 }
 

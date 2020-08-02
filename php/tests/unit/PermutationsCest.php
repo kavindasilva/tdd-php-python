@@ -12,6 +12,8 @@ class PermutationsCest
 
     /**
      * @example { "arr": [], "expect": false }
+     * @example { "arr": ["A"], "expect": ["A"] }
+     * @example { "arr": ["A", "B"], "expect": ["AB", "BA"] }
      * example { "arr": 0.5, "expect": false }
      */
     public function checkPermutations(\UnitTester $I, \Codeception\Example $Example)
