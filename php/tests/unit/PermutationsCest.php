@@ -28,10 +28,10 @@ class PermutationsCest
         $I->assertEquals( $Example["expect"], $result, "failed" );
     } 
 
-    // array_diff($a, $b) === array_diff($b, $a)
     /**
      * @example { "arr": ["A", "B"], "expect": ["AB", "BA"] }
      * @example { "arr": ["A", "B"], "expect": ["BA", "AB"] }
+     * @example { "arr": ["A", "B", "C", "D"], "expect": [ "ABCD", "ACBD", "BACD", "BCAD", "CABD", "CBAD",  "ABDC", "ACDB", "BADC", "BCDA", "CADB", "CBDA",  "ADBC", "ADCB", "BDAC", "BDCA", "CDAB", "CDBA",  "DABC", "DACB", "DBAC", "DBCA", "DCAB", "DCBA"] }
      */
     public function checkPermutationsWithoutOrder(\UnitTester $I, \Codeception\Example $Example)
     {
