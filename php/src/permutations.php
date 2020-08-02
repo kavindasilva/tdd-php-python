@@ -16,13 +16,17 @@ class Permutations{
                 $elems[1].$elems[0]
             ];
         }
-        $erst_of_arr = array_shift($elems);
-        return[
-            array_merge(
-                [ $elems[0] ],
-                $this->getPermutations( $elems )
-            )
-        ];
+        $nested_perms = [];
+        for($i=0; $i<count($elems); $i++){
+            $new_arr = $elems;
+            $head = $new_arr[$i];
+            unset($new_arr[$i]);
+
+            foreach($this->getPermutations( array_values($new_arr) ) as $other_perms ){
+                $nested_perms[] = $head .$other_perms;
+            }
+        }
+        return $nested_perms;
     }
 }
 
