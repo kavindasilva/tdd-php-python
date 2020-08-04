@@ -4,9 +4,14 @@ namespace App;
 
 class Permutations{
     public function getPermutations($elems=[]){
-        if( empty($elems) ){
+        if( empty($elems) || !is_array($elems) ){
             return false;
         }
+        return $this->calculatePermutations($elems);
+    }
+
+    // @TODO: make protected
+    public function calculatePermutations($elems=[]){
         if( count($elems) === 1 ){
             return [ $elems[0] ];
         }
@@ -22,7 +27,7 @@ class Permutations{
             $head = $new_arr[$i];
             unset($new_arr[$i]);
 
-            foreach($this->getPermutations( array_values($new_arr) ) as $other_perms ){
+            foreach($this->calculatePermutations( array_values($new_arr) ) as $other_perms ){
                 $nested_perms[] = $head .$other_perms;
             }
         }

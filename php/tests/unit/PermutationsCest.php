@@ -24,7 +24,7 @@ class PermutationsCest
      */
     public function checkPermutations(\UnitTester $I, \Codeception\Example $Example)
     {
-        $result = $this->class->getPermutations($Example["arr"]);
+        $result = $this->class->calculatePermutations($Example["arr"]);
         $I->assertEquals( $Example["expect"], $result, "failed" );
     } 
 
@@ -35,7 +35,7 @@ class PermutationsCest
      */
     public function checkPermutationsWithoutOrder(\UnitTester $I, \Codeception\Example $Example)
     {
-        $result = $this->class->getPermutations($Example["arr"]);
+        $result = $this->class->calculatePermutations($Example["arr"]);
         $diff = ( array_diff($Example["expect"], $result) === array_diff($result, $Example["expect"]) ) ? true : false;
         $I->assertTrue( $diff, "failed" );
     } 
